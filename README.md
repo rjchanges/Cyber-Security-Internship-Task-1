@@ -31,17 +31,3 @@ To discover open ports on devices in the local network (`192.168.1.0/24`) and un
 - **Status:** Host is up but all ports are closed/filtered.
 - **Analysis:** Likely a mobile device or IoT device with a strict firewall policy.
 
-## Interview Questions & Answers
-**1. What is an open port?**
-An open port is a network endpoint (identified by a number) that is actively listening for incoming connections from other devices.
-
-**2. How does Nmap perform a TCP SYN scan?**
-It sends a SYN packet. If the port is open, the target replies with SYN/ACK. Nmap then immediately sends a RST (Reset) to cancel the connection, making the scan faster and stealthier than a full connection.
-
-**3. What risks are associated with open ports?**
-Open ports increase the "attack surface." For example, the Telnet port found on `192.168.1.1` could allow an attacker to capture passwords, unlike SSH which is encrypted.
-
-**4. How can open ports be secured?**
-- **Firewalls:** Configure rules to block access to sensitive ports (like 445 or 56090) from unauthorized IPs.
-- **Disable Services:** If a service (like Telnet) is not needed, turn it off completely.
-- **Patching:** Keep the software running on the port (e.g., Boa HTTPd) updated to fix known vulnerabilities.
