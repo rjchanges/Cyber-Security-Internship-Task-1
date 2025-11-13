@@ -1,0 +1,144 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-13 16:28 +0530
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 16:28
+Completed NSE at 16:28, 0.00s elapsed
+Initiating NSE at 16:28
+Completed NSE at 16:28, 0.00s elapsed
+Initiating NSE at 16:28
+Completed NSE at 16:28, 0.00s elapsed
+Initiating ARP Ping Scan at 16:28
+Scanning 255 hosts [1 port/host]
+Completed ARP Ping Scan at 16:30, 105.99s elapsed (255 total hosts)
+Initiating Parallel DNS resolution of 2 hosts. at 16:30
+Completed Parallel DNS resolution of 2 hosts. at 16:30, 1.01s elapsed
+Initiating SYN Stealth Scan at 16:30
+Scanning 2 hosts [65535 ports/host]
+Discovered open port 53/tcp on 192.168.1.1
+Discovered open port 80/tcp on 192.168.1.1
+Discovered open port 56090/tcp on 192.168.1.1
+Completed SYN Stealth Scan at 16:30, 41.36s elapsed (131070 total ports)
+Initiating Service scan at 16:30
+Scanning 3 services on 2 hosts
+Completed Service scan at 16:30, 6.10s elapsed (3 services on 2 hosts)
+Initiating OS detection (try #1) against 2 hosts
+Retrying OS detection (try #2) against 192.168.1.5
+NSE: Script scanning 2 hosts.
+Initiating NSE at 16:30
+Completed NSE at 16:31, 8.54s elapsed
+Initiating NSE at 16:31
+Completed NSE at 16:31, 0.10s elapsed
+Initiating NSE at 16:31
+Completed NSE at 16:31, 0.01s elapsed
+Nmap scan report for 192.168.1.1
+Host is up (0.037s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE    SERVICE VERSION
+53/tcp    open     domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+80/tcp    open     http    Boa HTTPd 0.94.13
+| http-auth: 
+| HTTP/1.0 401 Unauthorized\x0D
+|_  Server returned status 401 but no WWW-Authenticate header.
+| http-cookie-flags: 
+|   /: 
+|      SESSIONID: 
+|_       httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Login
+|_http-server-header: Boa/0.94.13
+5555/tcp  filtered freeciv
+56090/tcp open     telnet  utelnetd
+MAC Address: B4:3D:08:D1:54:90 (GX International BV)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.19 - 2.6.36
+Uptime guess: 43.294 days (since Wed Oct  1 09:28:02 2025)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=186 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: tc; OS: Unix
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   37.00 ms 192.168.1.1
+
+Nmap scan report for 192.168.1.5
+Host is up (0.025s latency).
+All 65535 scanned ports on 192.168.1.5 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: F2:BA:85:C6:16:B8 (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   24.75 ms 192.168.1.5
+
+Initiating SYN Stealth Scan at 16:31
+Scanning 192.168.1.4 [65535 ports]
+Discovered open port 135/tcp on 192.168.1.4
+Discovered open port 139/tcp on 192.168.1.4
+Discovered open port 445/tcp on 192.168.1.4
+Discovered open port 49666/tcp on 192.168.1.4
+Discovered open port 49668/tcp on 192.168.1.4
+Discovered open port 49667/tcp on 192.168.1.4
+Discovered open port 5040/tcp on 192.168.1.4
+Discovered open port 49669/tcp on 192.168.1.4
+Discovered open port 49665/tcp on 192.168.1.4
+Discovered open port 49664/tcp on 192.168.1.4
+Completed SYN Stealth Scan at 16:31, 5.60s elapsed (65535 total ports)
+Initiating Service scan at 16:31
+Scanning 10 services on 192.168.1.4
+Completed Service scan at 16:32, 83.72s elapsed (10 services on 1 host)
+Initiating OS detection (try #1) against 192.168.1.4
+NSE: Script scanning 192.168.1.4.
+Initiating NSE at 16:32
+Completed NSE at 16:33, 14.27s elapsed
+Initiating NSE at 16:33
+Completed NSE at 16:33, 0.06s elapsed
+Initiating NSE at 16:33
+Completed NSE at 16:33, 0.01s elapsed
+Nmap scan report for 192.168.1.4
+Host is up (0.00022s latency).
+Not shown: 65524 closed tcp ports (reset)
+PORT      STATE    SERVICE       VERSION
+135/tcp   open     msrpc         Microsoft Windows RPC
+137/tcp   filtered netbios-ns
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds?
+5040/tcp  open     unknown
+49664/tcp open     msrpc         Microsoft Windows RPC
+49665/tcp open     msrpc         Microsoft Windows RPC
+49666/tcp open     msrpc         Microsoft Windows RPC
+49667/tcp open     msrpc         Microsoft Windows RPC
+49668/tcp open     msrpc         Microsoft Windows RPC
+49669/tcp open     msrpc         Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=11/13%OT=135%CT=1%CU=34855%PV=Y%DS=0%DC=L%G=Y%TM=6915B
+OS:AE5%P=i686-pc-windows-windows)
+Uptime guess: 4.685 days (since Sun Nov  9 00:06:49 2025)
+Network Distance: 0 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2025-11-13T11:02:50
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+NSE: Script Post-scanning.
+Initiating NSE at 16:33
+Completed NSE at 16:33, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (3 hosts up) scanned in 281.71 seconds
+           Raw packets sent: 197692 (8.696MB) | Rcvd: 262655 (10.778MB)
