@@ -12,14 +12,14 @@ To discover open ports on devices in the local network (`192.168.*.*/**`) and un
 
 ## Findings & Analysis
 
-### Host 1: 192.168.1.1 (Network Router)
+### Host 1: 192.***.*.* (Network Router)
 - **OS/Service:** Linux 2.6.x / Boa HTTPd.
 - **Open Ports:**
   - **Port 80 (HTTP):** Router configuration page.
   - **Port 53 (DNS):** dnsmasq service.
   - **Port 56090 (Telnet):** **CRITICAL FIND.** An unencrypted Telnet service is running on a high port. This poses a security risk as credentials sent over Telnet can be intercepted in plain text.
 
-### Host 2: 192.168.1.4 (Windows Workstation)
+### Host 2: 192.***.*.* (Windows Workstation)
 - **OS:** Microsoft Windows.
 - **Open Ports:**
   - **Port 445 (SMB):** Windows File Sharing.
@@ -27,7 +27,7 @@ To discover open ports on devices in the local network (`192.168.*.*/**`) and un
   - **Ports 49664-49669:** Dynamic RPC ports used by Windows services.
 - **Security Note:** Port 445 is standard for local networks but must be firewalled from the public internet to prevent SMB exploits.
 
-### Host 3: 192.168.1.5
+### Host 3: 192.***.*.*
 - **Status:** Host is up but all ports are closed/filtered.
 - **Analysis:** Likely a mobile device or IoT device with a strict firewall policy.
 
