@@ -2,11 +2,11 @@
 # Task 1: Network Scanning with Nmap
 
 ## Objective
-To discover open ports on devices in the local network (`192.168.1.0/24`) and understand network service exposure.
+To discover open ports on devices in the local network (`192.168.*.*/**`) and understand network service exposure.
 
 ## Steps Taken
 1. **Tool Installation:** Installed Nmap 7.98 on Windows.
-2. **Discovery:** Identified local IP range as `192.168.1.0/24`.
+2. **Discovery:** Identified local IP range as `192.168.*.*/**`.
 3. **Scanning:** Performed a comprehensive scan using `nmap -A` (Aggressive scan for OS and Version detection).
 4. **Analysis:** Analyzed the output to identify 3 active hosts.
 
